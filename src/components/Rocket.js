@@ -1,5 +1,6 @@
 import { Container, Sprite } from "pixi.js";
 import gsap from "gsap";
+import Fire from "./Fire";
 
 export default class Rocket extends Container {
   /**
@@ -66,6 +67,15 @@ export default class Rocket extends Container {
   }
 
   /**
+   * @readonly
+   * @memberof Rocket
+   * @returns {Number}
+   */
+  get fire(){
+    return new Fire();
+  }
+
+  /**
    * @private
    * @param {String} textureName
    */
@@ -73,6 +83,10 @@ export default class Rocket extends Container {
     this._body = new Sprite.from(textureName);
     this._body.y = 41;
     this._body.anchor.set(0.5);
-    this._inner.addChild(this._body);
+
+    const fireInstance = this.fire;
+    fireInstance.name = 'fire'
+    this._inner.addChild(fireInstance)
+    this._inner.addChild(this._body); 
   }
 }

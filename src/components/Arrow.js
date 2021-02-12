@@ -27,6 +27,6 @@ export default class Arrow extends Sprite {
    * @private
    */
   _handleMouseUp() {
-    this._tween = gsap.to(this.scale, { x: 1, y: 1, ease: "elastic.out(1, 0.4)", duration: 0.8});
+    this._tween = gsap.to(this.scale, { x: 1 , y: 1, ease: "elastic.out(1, 0.4)", duration: 0.8});
   }
 }
