@@ -30,9 +30,9 @@ export default class Play extends Scene {
     this.addChild(arrowLeft);
 
     const arrowRight = new Arrow();
-    arrowRight.name = 'arrow-left';
+    arrowRight.name = 'arrow-right';
     arrowRight.x = 500;
-    arrowRight.rotation= 1
+    arrowRight.rotation = 1
     arrowRight.on('click', () => this.next());
     this.addChild(arrowRight);
 
@@ -40,15 +40,15 @@ export default class Play extends Scene {
       data: {
         speed: {
           label: 'Speed',
-          value: 10
+          value: this._rockets[0].speed
         },
         handling: {
           label: 'Handling',
-          value: 50
+          value: this._rockets[0].handling
         },
         acceleration: {
           label: 'Acceleration',
-          value: 20
+          value: this._rockets[0].acceleration
         }
       }
     });
@@ -60,12 +60,31 @@ export default class Play extends Scene {
 
   setRocket(index) {
     this._rockets.forEach((r) => this.removeChild(r));
-
     const rocket = this._rockets[index];
+    
+    // this.removeChild(this._stats)
+    // this._stats = new Stats({
+    //   data: {
+    //     speed: {
+    //       label: 'Speed',
+    //       value: rocket.speed
+    //     },
+    //     handling: {
+    //       label: 'Handling',
+    //       value: rocket.handling
+    //     },
+    //     acceleration: {
+    //       label: 'Acceleration',
+    //       value: rocket.acceleration
+    //     }
+    //   }
+    // });
+    // this._stats.y = 130;
+    // this.addChild(this._stats);
+    
     rocket.show();
     rocket.y = -150;
     this.addChild(rocket);
-
     this._stats.set({
       acceleration: rocket.acceleration,
       speed: rocket.speed,
