@@ -4,7 +4,7 @@ import Rocket1 from '../components/rockets/Rocket1';
 import Arrow from '../components/Arrow';
 import Stats from '../components/Stats';
 import Rocket2 from '../components/rockets/Rocket2';
-import Rocket3 from '../components/rockets/Rocker3';
+import Rocket3 from '../components/rockets/Rocket3';
 import Rocket4 from '../components/rockets/Rocket4';
 
 export default class Play extends Scene {

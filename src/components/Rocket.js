@@ -66,14 +66,14 @@ export default class Rocket extends Container {
     return this._speed;
   }
 
-  /**
-   * @readonly
-   * @memberof Rocket
-   * @returns {Number}
-   */
-  get fire(){
-    return new Fire();
-  }
+  // /**
+  //  * @readonly
+  //  * @memberof Rocket
+  //  * @returns {Number}
+  //  */
+  // get fire(){
+  //   return new Fire();
+  // }
 
   /**
    * @private
@@ -85,8 +85,8 @@ export default class Rocket extends Container {
     this._body.anchor.set(0.5);
 
     const fireInstance = this.fire;
-    fireInstance.name = 'fire'
-    this._inner.addChild(fireInstance)
+    // fireInstance.name = 'fire'
+    // this._inner.addChild(fireInstance)
     this._inner.addChild(this._body); 
   }
 }

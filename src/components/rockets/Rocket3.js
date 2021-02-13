@@ -9,11 +9,11 @@ export default class Rocket3 extends Rocket {
       speed: 90,
       name: 'rocket-3'
     });
-    const fire = this._inner.getChildByName('fire');
-    fire.x = 120
-    fire.y = 100
-    fire.rotation = 4;
-    fire.scale.x = 0.5
-    fire.scale.y = 0.5
+    // const fire = this._inner.getChildByName('fire');
+    // fire.x = 120
+    // fire.y = 100
+    // fire.rotation = 4;
+    // fire.scale.x = 0.5
+    // fire.scale.y = 0.5
   }
 }
