@@ -16,8 +16,16 @@ export default class Rocket1 extends Rocket {
     // fire.x = 300
     // fire.y = 270
     // fire.rotation = 10;
+  }
+
+  ignite() {
+    this._fire.x = 300
+    this._fire.y = 270
+    this._fire.rotation = 10;
     this._fire.ignite();
   }
 
-   
+  extinguish(){
+    
+  }
 }
