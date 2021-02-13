@@ -1,3 +1,4 @@
+import Fire from '../Fire';
 import Rocket from '../Rocket';
 
 export default class Rocket4 extends Rocket {
@@ -9,11 +10,26 @@ export default class Rocket4 extends Rocket {
       speed: 60,
       name: 'rocket-4'
     });
-    // const fire = this._inner.getChildByName('fire');
-    // fire.x = 95
-    // fire.y = 165
-    // fire.rotation = 4.7;
-    // fire.scale.x = 0.5
-    // fire.scale.y = 0.5
+    this._fire = null;
+
+    this._setFire();
+    this.ignite();
+  }
+  ignite() {
+    this._fire.ignite();
+  }
+
+  extinguish() {
+    this.fire.extinguish();
+  }
+
+  _setFire() {
+    this._fire = new Fire();
+    this._fire.x = 95
+    this._fire.y = 165
+    this._fire.rotation = 4.7;
+    this._fire.scale.x = 0.5;
+    this._fire.scale.y = 0.5;
+    this._inner.addChildAt(this._fire, 0)
   }
 }
