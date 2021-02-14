@@ -61,27 +61,7 @@ export default class Play extends Scene {
   setRocket(index) {
     this._rockets.forEach((r) => this.removeChild(r));
     const rocket = this._rockets[index];
-    
-    // this.removeChild(this._stats)
-    // this._stats = new Stats({
-    //   data: {
-    //     speed: {
-    //       label: 'Speed',
-    //       value: rocket.speed
-    //     },
-    //     handling: {
-    //       label: 'Handling',
-    //       value: rocket.handling
-    //     },
-    //     acceleration: {
-    //       label: 'Acceleration',
-    //       value: rocket.acceleration
-    //     }
-    //   }
-    // });
-    // this._stats.y = 130;
-    // this.addChild(this._stats);
-    
+        
     rocket.show();
     rocket.y = -150;
     this.addChild(rocket);
