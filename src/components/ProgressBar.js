@@ -38,6 +38,7 @@ export default class ProgressBar extends Container {
     this._bar.drawRect(0, 0, this.background.width * this._value / this._max, 25);
     this._bar.endFill();
     this._bar.x = - this._width / 2;
+    console.log(this._bar.width)
   }
 
   /**
